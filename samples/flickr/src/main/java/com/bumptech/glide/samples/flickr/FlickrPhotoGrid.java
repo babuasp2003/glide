@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,7 @@ import java.util.List;
  * arguments in a grid pattern.
  */
 public class FlickrPhotoGrid extends Fragment implements PhotoViewer {
+  private static final String TAG = "FlickrPhotoGrid";
   private static final String STATE_POSITION_INDEX = "state_position_index";
 
   private static final String IMAGE_SIZE_KEY = "image_size";
@@ -188,6 +190,11 @@ public class FlickrPhotoGrid extends Fragment implements PhotoViewer {
           startActivity(intent);
         }
       });
+
+
+      if (BuildConfig.LOGGER_ENABLED) {
+        Log.d(TAG, "onBindViewHolder done for " + position);
+      }
     }
 
     @Override

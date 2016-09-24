@@ -7,6 +7,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.samples.flickr.BuildConfig;
 import com.bumptech.glide.util.LruCache;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,9 +21,8 @@ import java.util.Set;
 public class Api {
   private static Api api;
   private static final String TAG = "FlickrApi";
-  private static final String API_KEY = "f0e6fbb5fdf1f3842294a1d21f84e8a6";
-  private static final String SIGNED_API_URL =
-      "https://api.flickr.com/services/rest/?method=%s&format=json&api_key=" + API_KEY;
+  private static final String SIGNED_API_URL = BuildConfig.SIGNED_API_BASE_URL +
+      "/rest/?method=%s&format=json&api_key=" + BuildConfig.API_KEY;
   // Incomplete size independent url for photos that can be cached per photo
   private static final String CACHEABLE_PHOTO_URL = "http://farm%s.staticflickr.com/%s/%s_%s_";
   private static final int MAX_URLS_TO_CACHE = 2000;
