@@ -1,16 +1,5 @@
 apply plugin: 'com.android.library'
 
-dependencies {
-    compile "com.android.support:support-annotations:${SUPPORT_V4_VERSION}"
-
-    testCompile project(':testutil')
-    testCompile "com.android.support:support-v4:${SUPPORT_V4_VERSION}"
-    testCompile "com.google.truth:truth:${TRUTH_VERSION}"
-    testCompile "junit:junit:${JUNIT_VERSION}"
-    testCompile "org.mockito:mockito-core:${MOCKITO_VERSION}"
-    testCompile "org.robolectric:robolectric:${ROBOLECTRIC_VERSION}"
-}
-
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
     buildToolsVersion BUILD_TOOLS_VERSION as String
@@ -21,4 +10,5 @@ android {
     }
 }
 
+apply from: "${rootProject.projectDir}/scripts/dependencies.gradle"
 apply from: "${rootProject.projectDir}/scripts/upload.gradle"
