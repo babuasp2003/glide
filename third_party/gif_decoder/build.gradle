@@ -21,4 +21,4 @@ dependencies {
     testCompile "org.robolectric:robolectric:${ROBOLECTRIC_VERSION}"
 }
 
-apply from: "${rootProject.projectDir}/scripts/upload.gradle"
+apply from: "../../scripts/upload.gradle"

@@ -137,7 +137,7 @@ afterEvaluate {
     }
 }
 
-apply from: "${rootProject.projectDir}/scripts/upload.gradle"
+apply from: "../../glide/scripts/upload.gradle"
 // exclude <dependency> tag for android support-v4 library from :glide's pom
 // this will ensure that this warning will not prevent the build from completing:
 // Module 'com.github.bumptech.glide:glide:4.0.0-SNAPSHOT' depends on one or more Android Libraries but is a jar
