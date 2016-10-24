@@ -1,0 +1,27 @@
+exec {
+  commandLine "git", "submodule", "update", "--init", "--recursive"
+}
+
+include ':library'
+include ':glide'
+include ':gif_decoder'
+include ':disklrucache'
+include ':volley'
+include ':okhttp'
+include ':okhttp3'
+include ':gifencoder'
+include ':recyclerview'
+include ':testutil'
+
+project(':library').projectDir = new File('../../glide/library')
+project(':glide').projectDir = new File('../../glide/glide')
+project(':gif_decoder').projectDir = new File('../../glide/third_party/gif_decoder')
+project(':disklrucache').projectDir = new File('../../glide/third_party/disklrucache')
+project(':volley').projectDir = new File('../../glide/integration/volley')
+project(':okhttp').projectDir = new File('../../glide/integration/okhttp')
+project(':okhttp3').projectDir = new File('../../glide/integration/okhttp3')
+project(':gifencoder').projectDir = new File('../../glide/integration/gifencoder')
+project(':recyclerview').projectDir = new File('../../glide/integration/recyclerview')
+project(':testutil').projectDir = new File('../../glide/testutil')
+
+rootProject.name = 'glide-parent'

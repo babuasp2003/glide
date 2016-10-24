@@ -1,0 +1,4 @@
+rootProject.name = 'glide-parent'
+
+includeBuild '../glide_lib'
+includeBuild '../flickr_app'
