@@ -78,7 +78,7 @@ public final class RecyclerViewPreloader<T> extends RecyclerView.OnScrollListene
       PreloadModelProvider<T> preloadModelProvider,
       PreloadSizeProvider<T> preloadDimensionProvider, int maxPreload) {
 
-    ListPreloader<T> listPreloader = new ListPreloader<>(requestManager, preloadModelProvider,
+    ListPreloader<T> listPreloader = new ListPreloader<>(preloadModelProvider,
         preloadDimensionProvider, maxPreload);
     recyclerScrollListener = new RecyclerToListViewScrollListener(listPreloader);
   }

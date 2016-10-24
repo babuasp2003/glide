@@ -1,10 +1,11 @@
 apply plugin: 'com.android.application'
 
 dependencies {
-    compile project(':library')
     compile(project(':recyclerview')) {
         transitive = false
     }
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
     compile "com.android.support:support-v4:${SUPPORT_V4_VERSION}"
     compile "com.android.support:appcompat-v7:${SUPPORT_V7_VERSION}"
     compile "com.mcxiaoke.volley:library:${VOLLEY_VERSION}"

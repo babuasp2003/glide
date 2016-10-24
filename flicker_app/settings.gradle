@@ -1,0 +1,13 @@
+exec {
+  commandLine "git", "submodule", "update", "--init", "--recursive"
+}
+
+include ':flickr'
+include ':recyclerview'
+include ':testutil'
+
+project(':flickr').projectDir = new File('../../glide/samples/flickr')
+project(':recyclerview').projectDir = new File('../../glide/integration/recyclerview')
+project(':testutil').projectDir = new File('../../glide/testutil')
+
+rootProject.name = 'glide-parent'

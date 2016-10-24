@@ -1,7 +1,0 @@
-include ':library'
-include ':gif_decoder'
-include ':disklrucache'
-
-project(':library').projectDir = new File('../glide/library')
-project(':gif_decoder').projectDir = new File('../glide/third_party/gif_decoder')
-project(':disklrucache').projectDir = new File('../glide/third_party/disklrucache')
