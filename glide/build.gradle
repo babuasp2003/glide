@@ -1,7 +1,7 @@
 apply plugin: 'java'
 
-evaluationDependsOn(':third_party:gif_decoder')
-evaluationDependsOn(':third_party:disklrucache')
+evaluationDependsOn(':gif_decoder')
+evaluationDependsOn(':disklrucache')
 evaluationDependsOn(':library')
 
 def getAndroidSdkDirectory() {
@@ -13,10 +13,10 @@ def getAndroidCompileSdkVersion() {
 }
 
 def getInternalAndroidProjects() {
-    [':third_party:gif_decoder', ':library'].collect { project(it) }
+    [':gif_decoder', ':library'].collect { project(it) }
 }
 def getInternalJavaProjects() {
-    [':third_party:disklrucache'].collect { project(it) }
+    [':disklrucache'].collect { project(it) }
 }
 
 def getAllInternalProjects() {

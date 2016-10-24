@@ -1,21 +1,37 @@
 exec {
   commandLine "git", "submodule", "update", "--init", "--recursive"
 }
+
 include ':library'
 include ':glide'
-include ':third_party:gif_decoder'
-include ':third_party:disklrucache'
-include ':samples:flickr'
-include ':samples:giphy'
-include ':samples:svg'
-include ':samples:gallery'
-include ':samples:contacturi'
-include ':integration'
-include ':integration:volley'
-include ':integration:okhttp'
-include ':integration:okhttp3'
-include ':integration:gifencoder'
-include ':integration:recyclerview'
+include ':gif_decoder'
+include ':disklrucache'
+include ':flickr'
+include ':giphy'
+include ':svg'
+include ':gallery'
+include ':contacturi'
+include ':volley'
+include ':okhttp'
+include ':okhttp3'
+include ':gifencoder'
+include ':recyclerview'
 include ':testutil'
+
+project(':library').projectDir = new File('../glide/library')
+project(':glide').projectDir = new File('../glide/glide')
+project(':gif_decoder').projectDir = new File('../glide/third_party/gif_decoder')
+project(':disklrucache').projectDir = new File('../glide/third_party/disklrucache')
+project(':flickr').projectDir = new File('../glide/samples/flickr')
+project(':giphy').projectDir = new File('../glide/samples/giphy')
+project(':svg').projectDir = new File('../glide/samples/svg')
+project(':gallery').projectDir = new File('../glide/samples/gallery')
+project(':contacturi').projectDir = new File('../glide/samples/contacturi')
+project(':volley').projectDir = new File('../glide/integration/volley')
+project(':okhttp').projectDir = new File('../glide/integration/okhttp')
+project(':okhttp3').projectDir = new File('../glide/integration/okhttp3')
+project(':gifencoder').projectDir = new File('../glide/integration/gifencoder')
+project(':recyclerview').projectDir = new File('../glide/integration/recyclerview')
+project(':testutil').projectDir = new File('../glide/testutil')
 
 rootProject.name = 'glide-parent'

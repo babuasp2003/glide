@@ -16,8 +16,8 @@ coveralls {
 }
 
 dependencies {
-    compile project(':third_party:gif_decoder')
-    compile project(':third_party:disklrucache')
+    compile project(':gif_decoder')
+    compile project(':disklrucache')
     compile "com.android.support:support-v4:${SUPPORT_V4_VERSION}"
 
     testCompile project(':testutil')

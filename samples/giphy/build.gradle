@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 dependencies {
     compile project(':library')
-    compile(project(':integration:recyclerview')) {
+    compile(project(':recyclerview')) {
         transitive = false
     }
     compile 'com.google.code.gson:gson:2.3'
